@@ -1,15 +1,31 @@
-import React, { Component } from "react";
-import SecNav from "./SecNav";
+import React from "react";
+import Tabs from "./Tabs";
 
-export class Popular extends Component {
-	render() {
-		return (
-			<div>
-				<SecNav />
-				<h5>This is Popular page</h5>
-			</div>
-		);
-	}
+import Api from "./Api";
+
+export default function popo() {
+	return (
+		<div>
+			<Tabs>
+				<div label="All">
+					<Api />
+				</div>
+				<div label="Javascript">
+					<Api />
+				</div>
+				<div label="Python">
+					<Api />
+				</div>
+				<div label="CSS">
+					<Api />
+				</div>
+				<div label="Java">
+					<Api />
+				</div>
+				<div label="Ruby">
+					<Api />
+				</div>
+			</Tabs>
+		</div>
+	);
 }
-
-export default Popular;

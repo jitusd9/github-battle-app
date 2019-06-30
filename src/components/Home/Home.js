@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Theme/Light.css";
+import "../Theme/Dark.css";
 
 export class Home extends Component {
 	render() {

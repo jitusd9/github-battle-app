@@ -1,29 +1,3 @@
-// import React, { Component } from "react";
-// import Popular from "./Popular/Popular";
-// import Battle from "./Battle/Battle";
-
-// export class Navbar extends Component {
-// 	render() {
-// 		return (
-// 			<div>
-// 				<div className="topNav">
-// 					<ul>
-// 						<li>Popular</li>
-// 						<li style={deActive}>Battle</li>
-// 					</ul>
-// 				</div>
-// 				<Battle />
-// 			</div>
-// 		);
-// 	}
-// }
-
-// const deActive = {
-// 	color: "#ccc"
-// };
-
-// export default Navbar;
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -32,16 +6,16 @@ export default function Navbar() {
 		<div>
 			<nav className="topNav red darken-3">
 				<div className="container">
-					<a className="brand-logo">Github Battle</a>
+					<a className="brandLogo">Github Battle</a>
 					<ul className="topUL">
 						<li>
-							<NavLink to="/home">Home</NavLink>
+							<Link to="/">Home</Link>
 						</li>
 						<li>
-							<NavLink to="/popular">Popular</NavLink>
+							<Link to="/popular">Popular</Link>
 						</li>
 						<li>
-							<NavLink to="/battle">Battle</NavLink>
+							<Link to="/battle">Battle</Link>
 						</li>
 					</ul>
 				</div>

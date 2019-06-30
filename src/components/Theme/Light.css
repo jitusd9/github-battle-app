@@ -9,7 +9,7 @@ body {
 	border-bottom: 1px solid #0ff;
 }
 
-.brand-logo {
+.brandLogo {
 	margin-left: 150px;
 	font-family: sans-serif;
 	font-size: 50px;
@@ -35,7 +35,7 @@ body {
 }
 
 .topUL a {
-	color: #4fb0ff;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -60,10 +60,6 @@ body {
 	text-align: center;
 	color: #333;
 	font-size: 20px;
-}
-
-a.active {
-	color: #fff;
 }
 
 .secNav {
