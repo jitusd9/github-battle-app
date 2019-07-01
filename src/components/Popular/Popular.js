@@ -8,22 +8,22 @@ export default function popo() {
 		<div>
 			<Tabs>
 				<div label="All">
-					<Api />
+					<Api lang="all" />
 				</div>
 				<div label="Javascript">
-					<Api />
+					<Api lang="javascript" />
 				</div>
 				<div label="Python">
-					<Api />
+					<Api lang="python" />
 				</div>
 				<div label="CSS">
-					<Api />
+					<Api lang="css" />
 				</div>
 				<div label="Java">
-					<Api />
+					<Api lang="java" />
 				</div>
 				<div label="Ruby">
-					<Api />
+					<Api lang="ruby" />
 				</div>
 			</Tabs>
 		</div>

@@ -1,9 +1,9 @@
 body {
-	background-color: #343536;
+	background-color: #24292e;
 }
 
 a:not([href]):not([tabindex]) {
-	color: none;
+	color: #fd5406;
 	text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ a:not([href]):not([tabindex]):hover {
 .topNav {
 	width: 100%;
 	height: 80px;
-	background: #aaa;
+	background: #3f4448;
 	/* border-bottom: 1px solid #0ff; */
 }
 
@@ -44,7 +44,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .topUL a {
-	color: #27292b;
+	color: #ccc;
 	text-decoration: none;
 }
 
@@ -72,36 +72,20 @@ a:not([href]):not([tabindex]):hover {
 	font-size: 20px;
 }
 
-.secNav {
-	margin-top: 30px;
-	text-align: center;
-}
-
-.secNav ul li {
-	display: inline-block;
-	font-size: 25px;
-	font-family: Arial, Helvetica, sans-serif;
-
-	margin: 12px;
-}
-
-.secNav ul li a {
-	color: #ac3b07;
-}
-
-.secNav ul li a.active {
-	color: #ff3c00;
-}
-
-.secNav ul li a:hover {
-	text-decoration: none;
-}
+/* battle css */
 
 .battleStyle h1 {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 40px;
 	font-weight: lighter;
+	color: #eee;
+	margin-top: 20px;
+}
+
+.battleStyle p {
+	font-size: 20px;
+	text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cards {
@@ -116,7 +100,7 @@ a:not([href]):not([tabindex]):hover {
 	height: 200px;
 	border-radius: 5px;
 	box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
-	background: linear-gradient(120deg, #ff0195, #9900ff);
+	background: linear-gradient(120deg, #fd5406, #fd0606);
 }
 
 .cards div:nth-child(2) {
@@ -128,6 +112,15 @@ a:not([href]):not([tabindex]):hover {
 	margin: 20px;
 	color: #fff;
 }
+
+.cards .icon {
+	font-size: 4rem;
+	color: #24292e;
+	line-height: 0;
+	text-shadow: 0 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* popular css */
 
 .table {
 	color: #8595a5;
@@ -164,6 +157,7 @@ thead {
 	border-top: none;
 }
 
+.error,
 .loading {
 	color: #c0bec2;
 	text-align: center;
@@ -181,7 +175,7 @@ thead {
 }
 
 .tab-list {
-	background: #777;
+	background: #57636c;
 	padding-left: 0;
 }
 
@@ -190,11 +184,16 @@ thead {
 	list-style: none;
 	/* margin-bottom: -1px; */
 	padding: 0.5rem 0.75rem;
-	color: #eee;
+	color: #ccc;
 }
 
 .tab-list-active {
-	background-color: #666;
+	background-color: #fd5406;
+}
+
+.tab-list-active.tab-list-item {
+	color: #fff;
+	font-weight: bold;
 }
 
 .tabs_sidebar {
@@ -210,7 +209,7 @@ thead {
 	border: none;
 	width: 100%;
 	outline: none;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .tab_button.active {

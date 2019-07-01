@@ -24,7 +24,9 @@ export class Javascript extends Component {
 		axios
 			.get(
 				window.encodeURI(
-					`https://api.github.com/search/repositories?q=stars:>1+language:all&sort=stars&order=desc&type=Repositories`
+					`https://api.github.com/search/repositories?q=stars:>1+language:${
+						this.props.lang
+					}&sort=stars&order=desc&type=Repositories`
 				)
 			)
 			.then(response => {
@@ -47,7 +49,7 @@ export class Javascript extends Component {
 	}
 
 	renderError() {
-		return <div>Sorry! an error ocurred</div>;
+		return <div className="error">Sorry! an error ocurred</div>;
 	}
 
 	renderList() {
