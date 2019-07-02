@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import "../Theme/Dark.css";
+import "../Theme/Light.css";
 
 export class Home extends Component {
 	render() {
 		return (
 			<div className="homeStyle">
-				<h1>Welcome to Github Battle Game</h1>
-				<h4>Powered by React.js</h4>
+				<h1>Welcome to Github Battle App</h1>
+				<h4>
+					Powered by <span>⚛</span> React.js
+				</h4>
 				<p>
 					This is my first Project on React.js to grasp the fundamentals of one
 					of the popular font-end web technology. I've got this idea from
@@ -17,7 +19,7 @@ export class Home extends Component {
 					to learn it.
 				</p>
 				<p />
-				<p>Happy Coding!</p>
+				<p>👩‍💻 Happy Coding! 👨‍💻</p>
 			</div>
 		);
 	}

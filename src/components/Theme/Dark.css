@@ -19,6 +19,34 @@ a:not([href]):not([tabindex]):hover {
 	/* border-bottom: 1px solid #0ff; */
 }
 
+/* ui change css */
+
+.topNav .uiButton {
+	padding: 0.3em 0.5em;
+	border: none;
+	border-radius: 5px;
+	margin-right: 5%;
+	margin-top: 20px;
+	float: right;
+}
+
+.uiButton-light {
+	background: #fff;
+	color: #009ffc;
+
+	box-shadow: 0 0 20px 5px #fff;
+}
+
+.uiButton-dark {
+	background: #333;
+	color: #eee;
+	box-shadow: none;
+}
+
+.uiButton:focus {
+	outline: none;
+}
+
 .brandLogo {
 	font-family: sans-serif;
 	font-size: 50px;
@@ -47,6 +75,9 @@ a:not([href]):not([tabindex]):hover {
 	color: #ccc;
 	text-decoration: none;
 }
+.topUL a:hover {
+	color: #fff;
+}
 
 .homeStyle h1 {
 	margin-top: 100px;
@@ -68,7 +99,7 @@ a:not([href]):not([tabindex]):hover {
 	width: 80%;
 	margin: 0 auto;
 	text-align: center;
-	color: rgb(133, 133, 133);
+	color: #858585;
 	font-size: 20px;
 }
 
@@ -199,7 +230,7 @@ thead {
 .tabs_sidebar {
 	width: 125px;
 	flex-shrink: 0;
-	background: #fff;
+	background: rgb(212, 11, 11);
 }
 
 .tab_button {

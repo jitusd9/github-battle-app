@@ -5,7 +5,7 @@ import Api from "./Api";
 
 export default function popo() {
 	return (
-		<div>
+		<div className="popular">
 			<Tabs>
 				<div label="All">
 					<Api lang="all" />

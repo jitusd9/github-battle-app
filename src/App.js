@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Battle from "./components/Battle/Battle";
@@ -9,7 +10,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Navbar />
+				<Nav />
 				<Route exact path="/" component={Home} />
 				<Route path="/battle" component={Battle} />
 				<Route path="/popular" component={Popoular} />
