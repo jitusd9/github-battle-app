@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import GetData from "./getData";
 
 export class Enteruser extends Component {
 	constructor(props) {
@@ -103,16 +102,6 @@ export class Enteruser extends Component {
 						Lets Fight!
 					</button>
 				</form>
-				{formSubmit === true ? (
-					// <Compare
-					// 	guyOne={this.state.userOne.name}
-					// 	guyTwo={this.state.userTwo.name}
-					// 	show={this.state.display}
-					// />
-					<GetData />
-				) : (
-					console.log("no worries")
-				)}
 
 				<li>User 1: {this.state.userOne.name}</li>
 				<li>User 2: {this.state.userTwo.name}</li>
