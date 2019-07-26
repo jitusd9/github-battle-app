@@ -6,7 +6,7 @@ export class Nav extends Component {
 		super(props);
 
 		this.state = {
-			ui: true
+			ui: false
 		};
 
 		this.toggleUI = this.toggleUI.bind(this);
@@ -42,6 +42,7 @@ export class Nav extends Component {
 									? "uiButton uiButton-dark"
 									: "uiButton uiButton-light"
 							}
+							title="UI"
 						>
 							💡
 						</button>

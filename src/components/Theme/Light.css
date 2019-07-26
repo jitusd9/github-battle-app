@@ -72,7 +72,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .topUL a {
-	color: #eee;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .homeStyle h1 {
-	padding-top: 15%;
+	padding-top: 12%;
 	font-family: sans-serif;
 	font-size: 60px;
 	font-weight: lighter;
@@ -105,7 +105,7 @@ a:not([href]):not([tabindex]):hover {
 	font-size: 30px;
 	font-weight: lighter;
 	text-align: center;
-	color: #1549c4;
+	color: #06a4ff;
 }
 
 .homeStyle p {
@@ -114,6 +114,16 @@ a:not([href]):not([tabindex]):hover {
 	text-align: center;
 	color: #5d5e5f;
 	font-size: 20px;
+	font-style: italic;
+}
+
+.homeStyle .share p {
+	color: #5d5e5f;
+	font-style: normal;
+}
+
+.homeStyle a:hover {
+	text-decoration: none;
 }
 
 /* battle css */
@@ -166,6 +176,83 @@ a:not([href]):not([tabindex]):hover {
 	color: #053dc0;
 	line-height: 0;
 	text-shadow: 0 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.battleStyle form {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+	text-align: center;
+}
+.battleStyle form div {
+	/* width: 50%; */
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.battleStyle form div input {
+	display: inline;
+}
+
+.battleStyle form div input.focus {
+	border: 0;
+}
+
+.battleStyle #getButton {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	color: #2086d1;
+	border: 1px solid #26e5f6;
+	border-radius: 2px;
+	background: #fff;
+	padding: 0.3em 0.6em;
+	transition: 0.2s ease-in-out;
+}
+.battleStyle #getButton:hover {
+	transform: translateY(-2px);
+	background: #2086d1;
+	color: #fff;
+	border: none;
+}
+
+.display {
+	height: 90vh;
+	width: 90%;
+	z-index: 50;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.display.hide {
+	visibility: hidden;
+}
+
+.display .closeBtn {
+	float: right;
+	background: #f00;
+	color: #fff;
+	font-weight: bold;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+}
+
+#getUser .form-control {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+#getUser .form-control:focus {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+div .battleStyle #getButton:active,
+div .battleStyle #getButton:focus {
+	box-shadow: none;
+	outline: none;
 }
 
 /* popular css */
@@ -252,39 +339,6 @@ thead {
 	color: #fff;
 	font-weight: bold;
 }
-/* 
-.tabs_sidebar {
-	width: 125px;
-	flex-shrink: 0;
-	background: rgb(138, 12, 12);
-}
-
-.tab_button {
-	display: block;
-	padding: 10px;
-	background: #eee;
-	border: none;
-	width: 100%;
-	outline: none;
-	cursor: pointer;
-}
-
-.tab_button.active {
-	background: #ddd;
-}
-.tab_button:focus {
-	outline: none;
-}
-
-.tab_button:not(:last-of-type) {
-	border-bottom: 1px solid #ddd;
-}
-
-.tab_button--active {
-	font-weight: bold;
-	border-right: 2px solid #009879;
-	background: #ddd;
-} */
 
 .tab_content {
 	padding: 15px;
@@ -309,6 +363,21 @@ thead {
 	margin-top: 0;
 }
 
+.share {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.share a {
+	font-size: 40px;
+	padding: 15px;
+}
+
+.share a i {
+	color: #333;
+}
+
+/* *********************************************************** */
 /* dark ui css */
 .dark .topNav {
 	/* display: none; */
@@ -341,25 +410,34 @@ thead {
 .dark ~ .homeStyle h4 {
 	color: #b95120;
 }
+
+.dark ~ .homeStyle h4 span {
+	color: #06a4ff;
+}
+
 .dark ~ .homeStyle p {
 	color: #858585;
 }
 
+.dark ~ .homeStyle .share a i {
+	color: #0443a1;
+}
+
 /* dark battle css */
-.dark ~ .battleStyle {
+.dark ~ div .battleStyle {
 	background: #24292e;
 }
 
-.dark ~ .battleStyle h1 {
+.dark ~ div .battleStyle h1 {
 	color: #ccc;
 }
 
-.dark ~ .battleStyle .cards div {
+.dark ~ div .battleStyle .cards div {
 	box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
 	background: linear-gradient(120deg, #fd5406, #fd0606);
 }
 
-.dark ~ .battleStyle .cards .icon {
+.dark ~ div .battleStyle .cards .icon {
 	color: #24292e;
 }
 
@@ -380,4 +458,42 @@ thead {
 .dark ~ .popular .table tbody tr {
 	background: #36393b;
 	border-bottom: 1px solid #222;
+}
+
+.dark ~ div .form-control {
+	background: #777;
+	color: #fff;
+	border: 1px solid #aaa;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark ~ div .form-control::placeholder {
+	color: #eee;
+}
+
+.dark ~ div .form-control:focus {
+	border: 1px solid #aaa;
+	box-shadow: none;
+}
+
+.dark ~ div .battleStyle #getButton {
+	background: #777;
+	color: #fff;
+	border: 1px solid #aaa;
+}
+
+.dark ~ div .battleStyle #getButton:hover {
+	background: linear-gradient(120deg, #fd5406, #fd0606);
+	border: none;
+}
+
+.dark ~ div .battleStyle #getButton:active,
+.dark ~ div .battleStyle #getButton:focus {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.dark ~ div li {
+	color: #fff;
 }

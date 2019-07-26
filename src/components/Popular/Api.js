@@ -45,7 +45,11 @@ export class Javascript extends Component {
 	}
 
 	renderLoading() {
-		return <div className="loading">Loading...</div>;
+		return (
+			<div className="loading">
+				Loading...Most popular {this.props.lang} repositories
+			</div>
+		);
 	}
 
 	renderError() {
