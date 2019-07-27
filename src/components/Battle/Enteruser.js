@@ -24,7 +24,6 @@ export class Enteruser extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getData = this.getData.bind(this);
 		this.closeDisplay = this.closeDisplay.bind(this);
-		// this.findWinner = this.findWinner.bind(this);
 	}
 
 	handleUser1(e) {

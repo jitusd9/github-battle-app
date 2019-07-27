@@ -18,7 +18,7 @@ export class Compare extends Component {
 						/>
 
 						<div className="stats">
-							<h3>{this.props.user.name}</h3>
+							<h4>{this.props.user.name}</h4>
 							<ul>
 								<li>
 									<span>🏢</span>Location: {this.props.user.location}
@@ -43,13 +43,19 @@ export class Compare extends Component {
 								{this.props.user.login}
 							</a>
 						</div>
-						<h2>{this.props.score}</h2>
-						<h1>{this.props.win ? "Winner" : "Runner"}</h1>
+						<h2>Score:{this.props.score}</h2>
+						<h3 style={this.props.win ? winColor : null}>
+							{this.props.win ? "Winner" : "Runner"}
+						</h3>
 					</div>
 				</div>
 			</div>
 		);
 	}
 }
+
+const winColor = {
+	color: "#04fd04"
+};
 
 export default Compare;

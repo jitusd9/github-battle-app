@@ -21,9 +21,9 @@ export class Nav extends Component {
 	render() {
 		return (
 			<div className={this.state.ui ? "dark" : null}>
-				<nav className="topNav red darken-3">
+				<nav className="topNav ">
 					<div className="container">
-						<a className="brandLogo">Github Battle</a>
+						<h3>Github Battle</h3>
 						<ul className="topUL">
 							<li>
 								<Link to="/">Home</Link>
