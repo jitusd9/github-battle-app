@@ -44,7 +44,7 @@ export class Compare extends Component {
 							</a>
 						</div>
 						<h2>{this.props.score}</h2>
-						<h1>{this.props.win ? "Winner" : "Loser"}</h1>
+						<h1>{this.props.win ? "Winner" : "Runner"}</h1>
 					</div>
 				</div>
 			</div>
