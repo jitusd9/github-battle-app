@@ -10,7 +10,12 @@ export class Enteruser extends Component {
 			user2: "",
 			userOne: [],
 			userTwo: [],
+			score1: 0,
+			score2: 0,
+			win1: null,
+			win2: null,
 			display: "display hide",
+			overlay: "overlay hide",
 			formSubmit: false
 		};
 
@@ -19,6 +24,7 @@ export class Enteruser extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getData = this.getData.bind(this);
 		this.closeDisplay = this.closeDisplay.bind(this);
+		// this.findWinner = this.findWinner.bind(this);
 	}
 
 	handleUser1(e) {
@@ -59,15 +65,48 @@ export class Enteruser extends Component {
 
 		this.setState({
 			display: "display",
+			overlay: "overlay",
 			formSubmit: true
 		});
+
+		setTimeout(() => {
+			this.getWinner();
+		}, 3000);
 
 		return true;
 	}
 
+	getWinner() {
+		let count1 =
+			this.state.userOne.public_repos * 3 +
+			this.state.userOne.followers +
+			this.state.userOne.following * 3;
+		let count2 =
+			this.state.userTwo.public_repos * 3 +
+			this.state.userTwo.followers +
+			this.state.userTwo.following +
+			3;
+		if (count1 > count2) {
+			this.setState({
+				win1: true,
+				win2: false
+			});
+		} else {
+			this.setState({
+				win1: false,
+				win2: true
+			});
+		}
+		this.setState({
+			score1: count1,
+			score2: count2
+		});
+	}
+
 	closeDisplay = () => {
 		this.setState({
-			display: "display hide"
+			display: "display hide",
+			overlay: "overlay hide"
 		});
 	};
 
@@ -103,16 +142,30 @@ export class Enteruser extends Component {
 						form="getUser"
 						id="getButton"
 					>
-						Lets Fight!
+						Battle!
 					</button>
 				</form>
-
+				<div className={this.state.overlay} onClick={this.closeDisplay} />
 				<div className={this.state.display}>
 					<div className="closeBtn" onClick={this.closeDisplay}>
 						X
 					</div>
-
-					<Compare user1={this.state.userOne} user2={this.state.userTwo} />
+					<div className="wrapper">
+						<div id="div1">
+							<Compare
+								user={this.state.userOne}
+								win={this.state.win1}
+								score={this.state.score1}
+							/>
+						</div>
+						<div id="div2">
+							<Compare
+								user={this.state.userTwo}
+								win={this.state.win2}
+								score={this.state.score2}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

@@ -26,7 +26,10 @@ export class Home extends Component {
 				<br />
 
 				<div className="share">
-					<p>👩‍💻 Happy Coding! 👨‍💻</p>
+					<p>
+						{" "}
+						<span>👩‍💻</span> Happy Coding! <span>👨‍💻</span>{" "}
+					</p>
 					<a title="Github Repo" href="https://github.com/jitusd9">
 						<i class="fab fa-github" />
 					</a>
