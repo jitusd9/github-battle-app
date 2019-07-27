@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Compare from "./Compare";
 
 export class Enteruser extends Component {
 	constructor(props) {
@@ -17,6 +18,7 @@ export class Enteruser extends Component {
 		this.handleUser2 = this.handleUser2.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getData = this.getData.bind(this);
+		this.closeDisplay = this.closeDisplay.bind(this);
 	}
 
 	handleUser1(e) {
@@ -34,8 +36,6 @@ export class Enteruser extends Component {
 	}
 
 	getData(user, id) {
-		console.log(user, id);
-
 		axios.get(`https://api.github.com/users/${user}`).then(response => {
 			const us = response.data;
 			if (id === 1) {
@@ -65,9 +65,13 @@ export class Enteruser extends Component {
 		return true;
 	}
 
-	render() {
-		const formSubmit = this.state.formSubmit;
+	closeDisplay = () => {
+		this.setState({
+			display: "display hide"
+		});
+	};
 
+	render() {
 		return (
 			<div>
 				<form id="getUser" onSubmit={this.handleSubmit}>
@@ -103,8 +107,13 @@ export class Enteruser extends Component {
 					</button>
 				</form>
 
-				<li>User 1: {this.state.userOne.name}</li>
-				<li>User 2: {this.state.userTwo.name}</li>
+				<div className={this.state.display}>
+					<div className="closeBtn" onClick={this.closeDisplay}>
+						X
+					</div>
+
+					<Compare user1={this.state.userOne} user2={this.state.userTwo} />
+				</div>
 			</div>
 		);
 	}

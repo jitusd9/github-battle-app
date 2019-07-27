@@ -225,9 +225,14 @@ a:not([href]):not([tabindex]):hover {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.7);
 }
 
 .display.hide {
+	transition: 0.4s all ease-in-out;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -200%);
 	visibility: hidden;
 }
 
@@ -239,6 +244,18 @@ a:not([href]):not([tabindex]):hover {
 	height: 25px;
 	width: 25px;
 	text-align: center;
+	cursor: pointer;
+}
+
+/* compare css */
+.match {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.match .row {
+	flex: 1;
 }
 
 #getUser .form-control {
@@ -492,6 +509,11 @@ thead {
 	box-shadow: none;
 	outline: none;
 	border: none;
+}
+
+.dark ~ div .display {
+	background: #333;
+	color: #fff;
 }
 
 .dark ~ div li {
