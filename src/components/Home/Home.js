@@ -34,7 +34,7 @@ export class Home extends Component {
 						<i class="fab fa-github" />
 					</a>
 
-					<a title="Portfolio" href="https://jitusd9.github.io">
+					<a title="Portfolio" href="https://jitusd9.netlify.com/">
 						<i class="far fa-user" />
 					</a>
 				</div>
